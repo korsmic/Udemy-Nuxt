@@ -1,25 +1,13 @@
 <template>
   <section class="post-list">
     <PostPreview
-      id="1"
+      v-for="post in posts"
+      :key="post.id"
+      :id="post.id"
       :is-admin="isAdmin"
-      title="Hello there!"
-      thumbnail="https://www.fairobserver.com/wp-content/uploads/2019/08/Tech-news.jpg"
-      previewText="This my first post"
-    />
-    <PostPreview
-      id="2"
-      :is-admin="isAdmin"
-      title="Hello there!"
-      thumbnail="https://www.fairobserver.com/wp-content/uploads/2019/08/Tech-news.jpg"
-      previewText="This my second post"
-    />
-    <PostPreview
-      id="3"
-      :is-admin="isAdmin"
-      title="Hello there!"
-      thumbnail="https://www.fairobserver.com/wp-content/uploads/2019/08/Tech-news.jpg"
-      previewText="This my third post"
+      :title="post.title"
+      :thumbnail="post.thumbnail"
+      :previewText="post.previewText"
     />
   </section>
 </template>
@@ -31,9 +19,13 @@ export default {
     PostPreview
   },
   props: {
-    isAdmin :{
+    isAdmin: {
       type: Boolean,
       default: false
+    },
+    posts: {
+      type: Array,
+      required: true
     }
   }
 };
