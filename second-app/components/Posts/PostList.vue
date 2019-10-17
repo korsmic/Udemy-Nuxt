@@ -5,8 +5,8 @@
       :key="post.id"
       :id="post.id"
       :is-admin="isAdmin"
-      :title="post.title"
       :thumbnail="post.thumbnail"
+      :title="post.title"
       :previewText="post.previewText"
     />
   </section>
@@ -14,6 +14,7 @@
 
 <script>
 import PostPreview from "@/components/Posts/PostPreview";
+
 export default {
   components: {
     PostPreview
@@ -31,6 +32,7 @@ export default {
 };
 </script>
 
+
 <style scoped>
 .post-list {
   display: flex;
@@ -41,3 +43,4 @@ export default {
   justify-content: center;
 }
 </style>
+
