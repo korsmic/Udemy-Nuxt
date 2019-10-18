@@ -37,7 +37,7 @@ module.exports = {
   modules: ['@nuxtjs/axios'],
   axios: {
     baseURL: process.env.BASE_URL || 'https://udemy-nuxt-blog-f7a2c.firebaseio.com',
-    credentials: false
+    credentials: false,
   },
   /*
   ** Build configuration
@@ -50,9 +50,13 @@ module.exports = {
   },
   env: {
     baseUrl: process.env.BASE_URL || 'https://udemy-nuxt-blog-f7a2c.firebaseio.com',
+    fbAPIKey: 'AIzaSyATV3a6DUw36VRCBr9wra7vxEUewMeEifU',
   },
   transition: {
     name: 'fade',
     mode: 'out-in',
+  },
+  router: {
+    middleware: 'log',
   },
 };
