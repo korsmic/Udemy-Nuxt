@@ -56,7 +56,7 @@ module.exports = {
     name: 'fade',
     mode: 'out-in',
   },
-  router: {
-    middleware: 'log',
-  },
+  // router: {
+  //   middleware: 'log',
+  // },
 };
