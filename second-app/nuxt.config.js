@@ -51,7 +51,7 @@ module.exports = {
   },
   env: {
     baseUrl: process.env.BASE_URL || 'https://udemy-nuxt-blog-f7a2c.firebaseio.com',
-    fbAPIKey: 'AIzaSyATV3a6DUw36VRCBr9wra7vxEUewMeEifU',
+    fbAPIKey: 'xxxxxxx',
   },
   transition: {
     name: 'fade',
